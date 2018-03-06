@@ -1,0 +1,24 @@
+<h2>
+  Courses
+</h2>
+
+<table class="table">
+  
+  <tr>
+    <td>#</td>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Credits</td>
+    <td>DepartmentName</td>
+
+  </tr>
+
+  <tr *ngFor= "let course of getAllCourses(); let i = index">
+    <td>{{i}}</td>
+    <td>{{course.id}}</td>
+    <td>{{course.name}}</td>
+    <td>{{course.credits}}</td>
+    <td>{{course.departmentName}}</td>
+  </tr>
+
+</table>
