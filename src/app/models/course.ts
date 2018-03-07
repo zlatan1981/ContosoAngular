@@ -2,7 +2,7 @@ export class Course {
     id: number;
     name: string;
     credits: number;
-    departmentName: string;
+    departmentId: number;
     imageUrl: string;
 
 }

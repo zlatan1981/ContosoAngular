@@ -9,16 +9,18 @@
     <td>Id</td>
     <td>Name</td>
     <td>Credits</td>
-    <td>DepartmentName</td>
-
+    <td>DepartmentId</td>
+    <td [hidden] = "hideImg">Img</td>
   </tr>
 
-  <tr *ngFor= "let course of getAllCourses(); let i = index">
+  <tr *ngFor= "let course of courses; let i = index">
     <td>{{i}}</td>
     <td>{{course.id}}</td>
     <td>{{course.name}}</td>
     <td>{{course.credits}}</td>
-    <td>{{course.departmentName}}</td>
+    <td>{{course.departmentId}}</td>
+    <td [hidden]="hideImg"><img src="{{course.imageUrl}}" alt="hello" class="img-responsive"></td>
   </tr>
-
 </table>
+<br>
+<input type="button" class="btn btn-success" [value]="hideImg == true ? 'Show Img' : 'Hide Img'" (click)="toggleImg()">
